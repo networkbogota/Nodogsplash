@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>$gatewayname</title>
+		<!-- CSS Code -->
+		<link rel="stylesheet" href="http://ip/Nodogsplash/Front/css/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://ip/Nodogsplash/Front/css/style.css">
+		<!-- JS Code -->
+		<script src="http://10.30.13.113/Nodogsplash/Front/js/bootstrap.min.js"></script>
+		<script src="http://10.30.13.113/Nodogsplash/Front/js/jquery.min.js"></script>
+		<script>		
+			$(document).ready(function(){
+			    $('section[data-type="parallax_section"]').each(function(){
+			        var $bgobj = $(this); // Variable para asignacion de objeto
+			        $(window).scroll(function() {
+			        	$window = $(window);
+			            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+			            // cordinadas del background
+			            var coords = '50% '+ yPos + 'px';
+			            // moviendo el background
+			            $bgobj.css({ backgroundPosition: coords });
+			        });
+			    });
+			});
+		</script>
+	</head>
+	<body>
+	<div class="container-fluid">
+	<form role="form">
+		<section id="home" data-type="parallax_section" data-speed="10">
+			<article>
+				<figure>
+					<img class="img-responsive center-block" src="images/logo.png" width="720" height="103" alt="">
+					</figure>
+					<h2>Bienvenido a Network Bogota</h2>
+					<section id="text1">
+					<br><h3>Quienes Somos</h3><br>
+					<p>NetWorkBogota es un proyecto de comunicaciones basado en el uso de redes inalámbricas libres, en las cuales la comunidad es quien aporta para el  diseño, sostenimiento y funcionamiento de la red. Para el despliegue de esta red los participantes recurren a una integración entre hardware y software libre, el cual es usado para la generación de contenidos de interés comunitario, como lo pueden ser Noticias locales, Multimedia, Investigación, Sistemas de vigilancia comunal, entre otros servicios.</p><br>
+					<h3>Quienes No Somos!!!</h3><br>
+					<ul>
+						<li>No somos proveedores de Internet (ISP)</li>
+						<li>No somos una empresa</li>
+						<li>No cobramos mensualidades</li>
+						<li>No vendemos productos</li>
+					</ul><!--
+					<br></br><a href="http://networkbogota.org" target="_blank"><button>Saber más</button></a>-->
+				</section>
+			</article>
+		</section>
+		<section id="seccion2" data-type="parallax_section" data-speed="10">
+			<article>
+				<figure>
+					<img class="img-responsive center-block" src="images/logo.png" width="720" height="103" alt="">
+				</figure>
+				</br><br><h2>¿Qué es una red libre?</h2>
+				<section id="text2">
+					<br><br><br><p>Consisten en grupos de voluntarios, instituciones y empresas que construyen redes informáticas libres y gratuitas alternativas a las redes privadas gestionadas por los proveedores de Internet clásicos, para este fin utilizan tecnologías inalámbricas (Wi-Fi o Wireless) garantizando el acceso a la sociedad de la información y la incorporación de servicios de valor añadido.<p><br>
+					<h3>Algunos servicios</h3><br>
+					<ul>
+						<li>Cámaras comunitarias</li>
+						<li>Red social comunitaria</li>
+						<li>Wikipedia offline</li>
+						<li>Entre más servicios locales</li>
+					</ul>
+				</section>
+			</article>
+		</section>
+		<section id="section3" data-type="parallax_section" data-speed="10">
+			<article>
+				<figure>
+					<img class="img-responsive center-block" src="images/logo.png" width="720" height="103" alt="">
+				</figure><h2>Finalizar</h2>
+				<section id="text3">
+					<br><p>Antes de terminar permitenos conocer un poco sobre ti, por favor diligencia los siguientes campos: <p>
+						<figure>
+							<img class="img-responsive center-block" src="images/register.png" width="350" height="auto" alt="">
+						</figure><br>
+				</section>			
+			</article>	
+					<!-- Pop ups-->
+								<center><a href="#reg"><button type="button" class="btn btn-lg">Primera vez que me conecto</button>
+								<div id="reg" class="modalDialog">
+									<div>
+										<form class="contact_form" method="post" name="Registro" action="RNB.php">
+											<a href="#close" title="Close" class="close">X</a><center>
+											<h2>Registro</h2><br></br>
+											<label for="name">Nombres: </label>
+											<input class="form-control" type="text" name="name" placeholder="Dante" required/>					
+											<span class="form_hint">Nombre completo</span>
+											<label for="email"><br>Correo electr&oacute;nico</label>
+											<input class="form-control" type="email" name="email" placeholder="user@networkbogota.org" required/>
+											<span class="form_hint">Debe tener el formato "usuario@dominio.com"</span>
+											<br><br><br><h4>Acepto <a href="#terms">terminos y condiciones</a></h4>
+											<section title=".cb">
+											    <div class="cb">  
+											      <input class="form-control" type="checkbox" value="yes" id="cb" name="cd" required/>
+											      <label for="cb"></label>
+											    </div>
+										  	</section>								
+											<br><center><button type="submit">Registar</button><br></center>
+										</form>
+									</div>
+								</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#login"><button type="button" class="btn btn-lg">Ya habia ingresado antes</button></a>
+								<div id="login" class="modalDialog">
+									<div>
+										<form class="contact_form" method="post" name="Registro" action="LNB.php">
+											<a href="#close" title="Close" class="close">X</a><center>
+											<br><h2>Ingreso</h2><br>
+											<label for="email"><br>Correo electr&oacute;nico</label>
+											<input class="form-control" type="email" name="email" placeholder="user@networkbogota.org" required/>
+											<span class="form_hint">Debe tener el formato "usuario@dominio.com"</span>
+											<br><br><br><h4>Acepto <a href="#terms">terminos y condiciones</a></h4>
+											<section title=".cb2">
+											    <div class="cb2">  
+											      <input class="form-control" type="checkbox" value="yes" id="cb2" name="cd" required/>
+											      <label for="cb2"></label>
+											    </div>
+										  	</section>								
+											<br><center><button type="submit">Registar</button><br></center>
+										</form>
+									</div>
+								</div>
+							</td>
+					<div id="terms" class="modalDialog">
+						<div>
+							<a href="javascript:history.back()" title="Close" class="close">X</a><center>
+							<h2>Terminos y condiciones</h2><br></br>
+							<p>En construcción :D</p>
+							<br></br><br></br><center><a href="javascript:history.back()"><button type="button">Entendido</button></a><br>
+						</div>
+					</div>
+					<div id="succ" class="modalDialog">
+						<div>
+							<a href="$authtarget" title="Close" class="close">X</a><center>
+							<h2>Bienvenido de nuevo</h2><br></br>
+							<p>Recuerda que tus opiniones son importantes para nosotros.<br><br><br>
+							Si tienes algún comentario o inquietud no dudes en hacero saber al administrador</p>
+							<br><br><br><center><a href="$authtarget"><button type="button" onclick="location='http://networkbogota.org/'">Entendido</button></a><br>
+						</div>
+					</div>
+					<div id="succ2" class="modalDialog">
+						<div>
+							<a href="$authtarget" title="Close" class="close">X</a><center>
+							<h2>Ingreso exitoso</h2><br></br>
+							<p>Recuerda que tus opiniones son importantes para nosotros.<br><br><br>
+							Si tienes algún comentario o inquietud no dudes en hacero saber al administrador</p>
+							<br><br><br><center><a href="$authtarget"><button type="button" onclick="location='http://networkbogota.org/'">Entendido</button></a><br>
+						</div>
+					</div>
+					<div id="fail" class="modalDialog">
+						<div>
+							<a href="javascript:history.back()" title="Close" class="close">X</a><center>
+							<h2>Ocurio un error</h2><br></br>
+							<p>No es posible realizar la validación en estos momentos, por favor contacta al administrador</p>
+							<br><br><br><center><a href="javascript:history.back()"><button type="button">Entendido</button></a><br>
+						</div>
+					</div>
+				<!--<img src="images/splash.jpg" width="71" height="49" border="0" alt="Click to enter" title="Click to enter">-->
+				</center>
+				</a>			
+		</section>
+		</form>
+		</div>
+	</body>
+</html>
